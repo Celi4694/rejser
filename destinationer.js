@@ -10,55 +10,55 @@ const options = {
 };
 
 document.addEventListener("DOMContentLoaded", start);
-let mad;
+let byer;
 let filter = "alle";
 
 function start() {
   const filterKnapper = document.querySelectorAll("nav button");
-  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerMad));
+  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerByer));
   container = document.querySelector("section");
   temp = document.querySelector("template");
   hentdata();
 }
 
-function filtrerMad() {
-  filter = this.dataset.retter;
+function filtrerByer() {
+  filter = this.dataset.byer;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
-  visMad();
+  visByer();
   const header = document.querySelector("#alle_overskrift");
   header.textContent = this.textContent;
 }
 
 async function hentdata() {
   const response = await fetch(url, options);
-  mad = await response.json();
-  console.log(mad);
-  visMad();
+  byer = await response.json();
+  console.log(byer);
+  visByer();
 }
 
-function visMad() {
+function visByer() {
   const dest = document.querySelector("#liste");
   const skabelon = document.querySelector("template").content;
   dest.innerHTML = "";
-  //løb igennem array "Mad"
-  console.log(mad);
+  //løb igennem array "byer"
+  console.log(byer);
 
-  mad.forEach((enkeltMad) => {
-    if (filter == enkeltMad.kategori || filter == "alle") {
+  byer.forEach((enkleByer) => {
+    if (filter == enkleByer.kategori || filter == "alle") {
       const klon = temp.cloneNode(true).content;
 
       klon.querySelector("img").src =
-        "billeder/" + enkeltMad.billednavn + "-md.jpg";
-      klon.querySelector("h2").textContent = enkeltMad.navn;
+        "billeder/" + enkleByer.billednavn + "-md.jpg";
+      klon.querySelector("h2").textContent = enkleByer.navn;
       klon.querySelector(".kortbeskrivelse").textContent =
-        enkeltMad.kortbeskrivelse;
+        enkleByer.kortbeskrivelse;
       klon.querySelector(".pris").innerHTML =
-        "<b>Pris:<b>" + " " + enkeltMad.pris;
+        "<b>Pris:<b>" + " " + enkleByer.pris;
 
       klon
         .querySelector("article")
-        .addEventListener("click", () => visPopUp(enkeltMad));
+        .addEventListener("click", () => visPopUp(enkleByer));
 
       dest.appendChild(klon);
     }
