@@ -9,8 +9,11 @@
   </head>
   <body id="destinationer">
     <main>
+      <a href="forside.html"
+        ><figure id="logo"><img src="billeder/logo.svg" alt="logo" /></figure
+      ></a>
       <header>
-        <h1>Rejser</h1>
+        <h1>Where would you like to go?</h1>
       </header>
 
       <nav>
@@ -38,32 +41,37 @@
         <button data-byer="USA">USA</button>
       </nav>
 
-      <h2 id="alle_overskrift">Alle</h2>
+      <h2 id="alle_overskrift">All cities</h2>
 
       <section id="liste"></section>
 
       <template>
-        <article>
+        <article id="destination_article">
           <figure><img src="" alt="" /></figure>
           <h2></h2>
         </article>
       </template>
 
-      <section id="popup">
-        <article>
-          <button>X Luk vindue</button>
-          <figure><img src="" alt="" /></figure>
-          <h2></h2>
-          <p class="Tagline"></p>
-          <p class="Information"></p>
-          <p class="Rejselaengde"></p>
-        </article>
-      </section>
+      <div id="popup_container">
+        <section id="popup">
+          <article>
+            <button>X Close Window</button>
+            <figure><img src="" alt="" /></figure>
+            <h2></h2>
+            <p class="Tagline"></p>
+            <p class="Information"></p>
+            <p class="Rejselaengde"></p>
+          </article>
+        </section>
+      </div>
     </main>
     <footer>
-      <p>Hej</p>
-      <p>Hej</p>
-      <p>Hej</p>
+      <p>About us</p>
+      <p>
+        Øresundsvej 94 <br />
+        2300 Copenhagen S
+      </p>
+      <p>CVR: 123456678</p>
     </footer>
 
     <script src="destinationer.js"></script>

@@ -80,7 +80,7 @@ function visPopUp(popUp) {
   popup.querySelector(".Information").textContent = popUp.Information;
 
   popup.querySelector(".Rejselaengde").innerHTML =
-    "<b>Rejselaengde:<b>" + " " + popUp.Rejselaengde;
+    "<b>We recommend:<b>" + " " + popUp.Rejselaengde;
 
   console.log(popUp);
 }
