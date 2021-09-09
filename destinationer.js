@@ -48,13 +48,8 @@ function visByer() {
     if (filter == enkleByer.kategori || filter == "alle") {
       const klon = temp.cloneNode(true).content;
 
-      klon.querySelector("img").src =
-        "billeder/" + enkleByer.billednavn + "-md.jpg";
-      klon.querySelector("h2").textContent = enkleByer.navn;
-      klon.querySelector(".kortbeskrivelse").textContent =
-        enkleByer.kortbeskrivelse;
-      klon.querySelector(".pris").innerHTML =
-        "<b>Pris:<b>" + " " + enkleByer.pris;
+      klon.querySelector("img").src = "billeder/" + enkleByer.Billede;
+      klon.querySelector("h2").textContent = enkleByer.By;
 
       klon
         .querySelector("article")
@@ -75,16 +70,16 @@ function visPopUp(popUp) {
   const popup = document.querySelector("#popup");
   popup.style.display = "block";
 
-  popup.querySelector("img").src = "billeder/" + popUp.billednavn + "-md.jpg";
+  popup.querySelector("img").src = "billeder/" + popUp.Billede;
 
-  popup.querySelector("h2").textContent = popUp.navn;
+  popup.querySelector("h2").textContent = popUp.By;
 
-  popup.querySelector(".langbeskrivelse").textContent = popUp.langbeskrivelse;
+  popup.querySelector(".Tagline").textContent = popUp.Tagline;
 
-  popup.querySelector(".oprindelsesregion").textContent =
-    "Oprindelsesregion: " + popUp.oprindelsesregion;
+  popup.querySelector(".Information").textContent = popUp.Information;
 
-  popup.querySelector(".pris").innerHTML = "<b>Pris:<b>" + " " + popUp.pris;
+  popup.querySelector(".Rejselaengde").innerHTML =
+    "<b>Rejselaengde:<b>" + " " + popUp.Rejselaengde;
 
   console.log(popUp);
 }
