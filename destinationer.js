@@ -11,18 +11,18 @@ const options = {
 
 document.addEventListener("DOMContentLoaded", start);
 let byer;
-let filter = "alle";
+let filtrer = "alle";
 
 function start() {
-  const filterKnapper = document.querySelectorAll("nav button");
-  filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerByer));
+  const filtrerKnapper = document.querySelectorAll("nav button");
+  filtrerKnapper.forEach((knap) => knap.addEventListener("click", filtrerByer));
   container = document.querySelector("section");
   temp = document.querySelector("template");
   hentdata();
 }
 
 function filtrerByer() {
-  filter = this.dataset.byer;
+  filtrer = this.dataset.byer;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visByer();
@@ -45,7 +45,7 @@ function visByer() {
   console.log(byer);
 
   byer.forEach((enkleByer) => {
-    if (filter == enkleByer.kategori || filter == "alle") {
+    if (filtrer == enkleByer.kategori || filtrer == "alle") {
       const klon = temp.cloneNode(true).content;
 
       klon.querySelector("img").src = "billeder/" + enkleByer.Billede + ".jpg";
