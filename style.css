@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("fonts/webfontkit-20210909-062228/montserrat-regular-webfont.woff2")
+    format("woff2");
+}
+
+/*               Css for destinationssiden             */
 section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -26,7 +33,7 @@ article,
 button {
   cursor: pointer;
   border-style: none;
-  background-color: white;
+  background-color: transparent;
   font-size: 1rem;
 }
 
@@ -50,4 +57,98 @@ button {
 #popup button {
   border-style: none;
   font-size: 1rem;
+}
+/*               Css for forsiden             */
+#forside {
+  background: url(billeder/baggrund.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: montserrat;
+}
+
+#forside h1 {
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 6vw;
+  margin-top: 6vw;
+}
+
+#forside main {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+#forside button {
+  border-style: none;
+  border-radius: 1vw;
+  background-color: rgba(0, 0, 0, 0.61);
+  color: white;
+  padding: 2vw 0vw 2vw 0vw;
+  font-size: 1.5rem;
+}
+
+#forside nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+}
+#forside_tekst {
+  display: flex;
+  justify-content: center;
+  gap: 8vw;
+  margin-top: 4vw;
+}
+
+#p_right,
+#p_left {
+  background-color: rgba(255, 255, 255, 0.705);
+  padding: 2vw;
+  border-radius: 1vw;
+}
+
+#forside p {
+  font-size: 0.9rem;
+}
+
+#forside h2 {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 12vw;
+}
+
+#forside h3 {
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#forside footer {
+  display: flex;
+  justify-content: center;
+  gap: 15vw;
+  margin-top: 40vw;
+  background-color: #a2aed6c9;
+  padding: 3vw;
+}
+
+@media (min-width: 1000px) {
+  #forside nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2vw;
+  }
+  #forside button {
+    padding: 4vw 0vw 4vw 0vw;
+    font-size: 2.5rem;
+  }
+
+  #forside h1 {
+    font-size: 4rem;
+  }
+  #forside p {
+    font-size: 1rem;
+  }
 }
