@@ -25,6 +25,13 @@ figure {
 article,
 button {
   cursor: pointer;
+  border-style: none;
+  background-color: white;
+  font-size: 1rem;
+}
+article,
+button hover {
+  text-decoration: underline;
 }
 
 #popup {
