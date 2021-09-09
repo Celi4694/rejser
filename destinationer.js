@@ -48,7 +48,7 @@ function visByer() {
     if (filter == enkleByer.kategori || filter == "alle") {
       const klon = temp.cloneNode(true).content;
 
-      klon.querySelector("img").src = "billeder/" + enkleByer.Billede;
+      klon.querySelector("img").src = "billeder/" + enkleByer.Billede + ".jpg";
       klon.querySelector("h2").textContent = enkleByer.By;
 
       klon
@@ -70,7 +70,7 @@ function visPopUp(popUp) {
   const popup = document.querySelector("#popup");
   popup.style.display = "block";
 
-  popup.querySelector("img").src = "billeder/" + popUp.Billede;
+  popup.querySelector("img").src = "billeder/" + popUp.Billede + ".jpg";
 
   popup.querySelector("h2").textContent = popUp.By;
 
