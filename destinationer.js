@@ -23,6 +23,7 @@ function start() {
 
 function filtrerByer() {
   filtrer = this.dataset.byer;
+  console.log(filtrer);
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visByer();
@@ -45,7 +46,7 @@ function visByer() {
   console.log(byer);
 
   byer.forEach((enkleByer) => {
-    if (filtrer == enkleByer.kategori || filtrer == "alle") {
+    if (filtrer == enkleByer.Land || filtrer == "alle") {
       const klon = temp.cloneNode(true).content;
 
       klon.querySelector("img").src = "billeder/" + enkleByer.Billede + ".jpg";
