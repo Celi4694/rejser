@@ -31,9 +31,9 @@ button:hover {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
-  margin-top: 13vw;
+  margin-top: 20vw;
   text-align: center;
 }
 
@@ -47,9 +47,17 @@ h1 {
   font-family: montserrat;
 }
 
+#destinationer nav {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  margin-top: 5vw;
+  margin-bottom: 10vw;
+}
+
 img {
-  max-width: 350px;
-  height: 300px;
+  max-width: 100%;
+  min-height: auto;
 }
 
 #alle_overskrift {
@@ -72,8 +80,8 @@ img {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.61);
   padding: 1vw 4vw 1vw 4vw;
-  bottom: 0;
-  font-size: 1.7rem;
+  bottom: 1;
+  font-size: 1.5rem;
 }
 
 article,
@@ -106,6 +114,8 @@ button {
 #popup article {
   background-color: #919ab5;
   border-style: none;
+  overflow: scroll;
+  height: 90vh;
 }
 
 #popup p {
@@ -187,11 +197,25 @@ button {
 /* --------------------------Css for ipad-------------------------------*/
 
 @media (min-width: 600px) {
+  #destinationer nav button {
+    font-size: 1.2rem;
+    margin-top: 0;
+  }
+
+  #destinationer section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #alle_overskrift {
+    font-size: 2rem;
+  }
+
   #forside header img {
     width: 7vw;
   }
 
-  #forside h1 {
+  h1 {
     font-size: 2.5rem;
     color: white;
   }
@@ -228,6 +252,11 @@ button {
 /* --------------------------Css for stor skærm-------------------------------*/
 
 @media (min-width: 1000px) {
+  #destinationer nav button {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
   #destinationer section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -243,11 +272,15 @@ button {
     font-size: 2.5rem;
   }
 
-  #forside h1 {
-    font-size: 4rem;
+  h1 {
+    font-size: 3rem;
   }
   #forside p {
     font-size: 1rem;
+  }
+
+  #alle_overskrift {
+    font-size: 2.5rem;
   }
 
   #forside header img {
@@ -266,6 +299,6 @@ button {
   }
 }
 
-.hide{
+.hide {
   display: none;
 }
