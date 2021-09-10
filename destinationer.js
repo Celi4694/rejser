@@ -12,6 +12,7 @@ const options = {
 document.addEventListener("DOMContentLoaded", start);
 let byer;
 let filtrer = "alle";
+document.querySelector("#popup").style.display = "none";
 
 function start() {
   const filtrerKnapper = document.querySelectorAll("nav button");
