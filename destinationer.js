@@ -1,8 +1,6 @@
 let container;
 let temp;
-
 const url = "https://storbydata-7e97.restdb.io/rest/data";
-
 const options = {
   headers: {
     "x-apikey": "6139bf1643cedb6d1f97eeb1",
@@ -84,6 +82,42 @@ function visPopUp(popUp) {
     "<b>We recommend:<b>" + " " + popUp.Rejselaengde;
 
   console.log(popUp);
+
+
+
+
+
+
+  
+
+  // Oprettes en tom constant, fordi så har jeg en generel som gælder i alle functions nedenfor i scriptet //
+  const urlParams = new URLSearchParams(window.location.search);
+  const kontinent = urlParams.get("kontinent");
+  let json;
+  console.log(kontinent);
+
+  // Sitet synkroniserer med data fra json database
+  async function hentData() { 
+      const result = await fetch(url+kontinent, options);
+      land = await result.json();
+      console.log(land);
+      visLand();
+      }
+
+  function visLand() {
+      document.querySelector(".navn").textContent = person.fornavn;
+      document.querySelector("img").src = "faces/" + person.billede;
+      document.querySelector(".email").textContent = person.email;
+      document.querySelector(".hobby").textContent ="Hobby: " + person.hobby;
+  }   
+  
+  document.querySelector("button").addEventListener("click",() => {window.history.back()});
+
+
+
+
+
+
 }
 
 hentdata();
