@@ -11,18 +11,43 @@ document.addEventListener("DOMContentLoaded", start);
 let byer;
 let filtrer = "alle";
 document.querySelector("#popup").style.display = "none";
+let kontinent = "alle";
+
+
+
 
 function start() {
+   // Oprettes en tom constant, fordi så har jeg en generel som gælder i alle functions nedenfor i scriptet //
+   const urlParams = new URLSearchParams(window.location.search);
+   kontinent = urlParams.get("kontinent");
+   let json;
+   console.log(kontinent);
+
   const filtrerKnapper = document.querySelectorAll("nav button");
   filtrerKnapper.forEach((knap) => knap.addEventListener("click", filtrerByer));
   container = document.querySelector("section");
   temp = document.querySelector("template");
+  filtrerNav();
   hentdata();
 }
 
+function filtrerNav() {
+  const knapper = document.querySelectorAll("nav button");
+  // console.log(knapper);
+  knapper.forEach(knap=>{
+    console.log(kontinent)
+    if (knap.dataset.kontinent == kontinent) {
+      knap.style.display="inline";
+    } else {
+      knap.style.display="none"
+    }
+  })
+  
+}
+
 function filtrerByer() {
-  filtrer = this.dataset.byer;
-  console.log(filtrer);
+  filtrer = this.dataset.land;
+  // console.log(filtrer);
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visByer();
@@ -33,7 +58,7 @@ function filtrerByer() {
 async function hentdata() {
   const response = await fetch(url, options);
   byer = await response.json();
-  console.log(byer);
+  // console.log(byer);
   visByer();
 }
 
@@ -42,9 +67,10 @@ function visByer() {
   const skabelon = document.querySelector("template").content;
   dest.innerHTML = "";
   //løb igennem array "byer"
-  console.log(byer);
+  // console.log(byer);
 
-  byer.forEach((enkleByer) => {
+  byer.forEach((enkleByer) => { 
+    console.log(enkleByer.Kontinent, kontinent);
     if (filtrer == enkleByer.Land || filtrer == "alle") {
       const klon = temp.cloneNode(true).content;
 
@@ -81,7 +107,7 @@ function visPopUp(popUp) {
   popup.querySelector(".Rejselaengde").innerHTML =
     "<b>We recommend:<b>" + " " + popUp.Rejselaengde;
 
-  console.log(popUp);
+  // console.log(popUp);
 
 
 
@@ -90,21 +116,17 @@ function visPopUp(popUp) {
 
   
 
-  // Oprettes en tom constant, fordi så har jeg en generel som gælder i alle functions nedenfor i scriptet //
-  const urlParams = new URLSearchParams(window.location.search);
-  const kontinent = urlParams.get("kontinent");
-  let json;
-  console.log(kontinent);
+ 
 
   // Sitet synkroniserer med data fra json database
   async function hentData() { 
       const result = await fetch(url+kontinent, options);
       land = await result.json();
-      console.log(land);
+      // console.log(land);
       visLand();
       }
 
-  function visLand() {
+  function visKontinent() {
       document.querySelector(".navn").textContent = person.fornavn;
       document.querySelector("img").src = "faces/" + person.billede;
       document.querySelector(".email").textContent = person.email;
