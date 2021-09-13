@@ -16,9 +16,6 @@ footer {
   font-size: 0.7rem;
 }
 
-button:hover {
-  text-decoration: underline;
-}
 
 #logo img {
   width: 4vw;
@@ -97,6 +94,11 @@ button {
   border-style: none;
   background-color: transparent;
   font-size: 1rem;
+}
+
+.valgt {
+  color: white;
+  text-decoration-line: underline;
 }
 
 /* --------------------------Css for popUp-------------------------------*/
