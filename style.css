@@ -57,7 +57,7 @@ h1 {
 
 img {
   max-width: 100%;
-  min-height: auto;
+  height: auto;
 }
 
 #alle_overskrift {
