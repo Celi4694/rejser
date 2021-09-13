@@ -38,6 +38,9 @@ function filtrerNav() {
     } else {
       knap.style.display = "none";
     }
+    // Vi skriver en if sætning her, for at fjerne click funktionen fra alle-knappen, for
+    // så at tilføje en click funktion til at filtrere byer indenfor kontinentet.Så fjerner
+    // vi display none som vi satte på længere oppe.
     if (knap.dataset.kontinent == "alle") {
       knap.removeEventListener("click", filtrerByer);
       knap.addEventListener("click", visKontinentByer);
