@@ -55,10 +55,10 @@ async function hentdata() {
   const response = await fetch(url, options);
   byer = await response.json();
   // console.log(byer);
-  visKontinenter();
+  visKontinentByer();
 }
 
-function visKontinenter() {
+function visKontinentByer() {
   const dest = document.querySelector("#liste");
   const skabelon = document.querySelector("template").content;
   dest.innerHTML = "";
