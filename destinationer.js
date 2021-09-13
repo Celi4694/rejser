@@ -38,6 +38,11 @@ function filtrerNav() {
     } else {
       knap.style.display = "none";
     }
+    if (knap.dataset.kontinent == "alle") {
+      knap.removeEventListener("click", filtrerByer);
+      knap.addEventListener("click", visKontinentByer);
+      knap.style.display = "inline";
+    }
   });
 }
 
