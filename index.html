@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CityExplorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
 
     <link
@@ -35,17 +38,23 @@
     <meta name="msapplication-config" content="favicon/browserconfig.xml" />
     <meta name="theme-color" content="#ffffff" />
   </head>
-  <body id="forside">
-    <main>
-      <div id="logocontainer">
-        <a href="forside.html"
-          ><figure id="logo"><img src="billeder/logo.svg" alt="logo" /></figure
-        ></a>
-        <div class="navn">CityExplore</div>
-      </div>
 
+
+  <body id="forside">
+    <div class="menu">
+    <div id="logocontainer">
+      <a href="forside.html"
+        ><figure id="logo"><img src="billeder/logo.svg" alt="logo" /></figure
+      ></a>
+      <div class="navn">CityExplore</div>
+    </div>
+  </div>
+
+    <main>
+      <div class="section_1">
+        <div class="section_1_wrapp">
       <header>
-        <h1>Explore our handpicked cites of the world</h1>
+        <h1> Inspiration, traveltips and much more...</h1>
       </header>
       <nav>
         <button id="europe" data-kontinent="Europe">Europe</button>
@@ -59,8 +68,11 @@
           North America
         </button>
       </nav>
-
-      <h2>Your online-travel guide to the best city adventures</h2>
+    </div>
+  </div>
+    <div class="section_2">
+      <div class="section_2_wrapper">
+      <h2>Online-travel guide to the best city adventures</h2>
       <div id="forside_tekst">
         <div id="p_left">
           <h3>Inspiration & Safety</h3>
@@ -69,22 +81,48 @@
           </p>
         </div>
         <div id="p_right">
-          <h3>Support the local businesses</h3>
+          <h3>Support local businesses</h3>
           <p>
              What better way of exploring new paths, than to explore it in the footsteps of those who walk it everyday. 
-             We've made it easy for you to support the local businesses and indulge yourself in the treats of the big-city-life whilst you connect and experience the most charming and original sides of the city.
+             We've made it easy for you to support the local businesses and indulge yourself in the big-city-life whilst you connect and experience the most charming sides of the city.
           </p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <section class="section_3">
+    <div class="form_placering">
+        <h2>CONTACT</h2>
+
+        <form>
+            <div class="form_container_1">
+                <input placeholder="NAME" type="text" name="fnavn" class="no-outline" required>
+                <input placeholder="PHONE" type="tel" name="tel" required>
+                <input placeholder="E-MAIL" type="email" name="email" required>
+            </div>
+
+
+            <div class="form_container_2">
+                <textarea name="MESSAGE" placeholder=" MESSAGE" id="MESSAGE" cols="30" rows="10"></textarea>
+            </div>
+        </form>
+        <div id="submit_knap">
+            <button> SUBMIT</button>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <footer>
-      <p>About us</p>
-      <p>
-        Øresundsvej 94 <br />
-        2300 Copenhagen S
+
+      <p> <b>Passionsprojekt</b>
       </p>
-      <p>CVR: 123456678</p>
+
+      <p> <b>Gruppe 5</b>
+      </p>
+
     </footer>
     <script src="forside.js"></script>
   </body>

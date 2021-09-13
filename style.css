@@ -1,47 +1,94 @@
-@font-face {
-  font-family: "montserrat";
-  src: url("fonts/webfontkit-20210909-062228/montserrat-regular-webfont.woff2")
-    format("woff2");
+
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: contain;
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  gap: 15vw;
-  margin-top: 40vw;
-  background-color: #919ab5;
-  color: white;
-  padding: 3vw;
-  text-align: center;
-  font-size: 0.7rem;
+
+body {
+  margin: 0px;
+}
+
+main {
+  display: grid;
+    grid-template-columns: 1fr minmax(0, 1300px) 1fr;
 }
 
 
 #logo img {
-  width: 4vw;
+  width: 30px;
   height: auto;
-  position: absolute;
+  /* position: absolute; */
   left: 0;
   top: 0;
-  margin-top: 4vw;
-  margin-left: 4vw;
+}
+
+#logo {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
   color: white;
-  margin-top: 20vw;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+
+footer {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 10vh;
+  background-color: #919ab5;
+}
+
+footer p {
+  font-weight: 500;
+}
+
+
 #logocontainer {
+  display: flex;
+  position: fixed;
   color: white;
   font-weight: 400;
-  margin-top: 5vw;
   align-items: center;
-  gap: 0;
+  gap: 0.3rem;
+  margin-left: 5vw;
+  margin-top: 5vw;  
 }
+
 /* --------------------------Css for destinationer-------------------------------*/
+
+.destinationer_header {
+  grid-column: 2/3;
+}
+
 
 #destinationer {
   background: url(billeder/baggrund.png);
@@ -57,15 +104,17 @@ h1 {
   gap: 5vw;
   margin-top: 5vw;
   margin-bottom: 10vw;
+  grid-column: 2/3;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 60%;
 }
 
 #alle_overskrift {
   font-size: 1.5rem;
+  grid-column: 2/3;
 }
 
 #destinationer h2 {
@@ -88,6 +137,10 @@ img {
   font-size: 1.5rem;
 }
 
+#liste {
+  grid-column: 2/3;
+}
+
 article,
 button {
   cursor: pointer;
@@ -106,6 +159,7 @@ button {
 #popup_container {
   display: flex;
   justify-content: center;
+  grid-column: 2/3;
 }
 
 #popup {
@@ -139,6 +193,16 @@ button {
 
 /* --------------------------Css for forsiden-------------------------------*/
 
+.menu {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  background-color: #919ab5;
+  padding-top: 2rem;
+}
+
+
 #forside {
   background: url(billeder/baggrund.png);
   background-size: cover;
@@ -150,12 +214,73 @@ button {
 #forside header {
   display: flex;
   justify-content: center;
-  margin-bottom: 8vw;
 }
 
 #forside main {
-  margin-left: 10vw;
-  margin-right: 10vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+}
+
+.section_1 {
+  scroll-snap-align: start;
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  grid-column: 2/3;
+}
+
+.section_2 {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-column: 2/3;
+}
+
+.section_2 {
+  scroll-snap-align: start;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-column: 2/3;
+}
+
+.section_2{
+  scroll-snap-align: start;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-column: 2/3;
+}
+
+.section_3 {
+  grid-column: 2/3;
+}
+
+#p_left{
+  background-color: #919ab5;
+  box-shadow: 4px 4px #00000075;
+}
+
+#p_left p{
+  background-color: #919ab5;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+#p_right{
+  background-color: #919ab5;
+  box-shadow: 4px 4px #00000075;
+}
+
+#p_right p{
+  background-color: #919ab5;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
 }
 
 #forside button {
@@ -163,45 +288,146 @@ button {
   border-radius: 1vw;
   background-color: rgba(0, 0, 0, 0.61);
   color: white;
-  padding: 2vw 0vw 2vw 0vw;
-  font-size: 1.5rem;
+  padding: 3vw 0vw 3vw 0vw;
 }
+
 
 #forside nav {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1vw;
+  gap: 2vw;
 }
 #forside_tekst {
-  display: flex;
   justify-content: center;
   gap: 8vw;
-  margin-top: 4vw;
 }
 
 #p_right,
 #p_left {
   color: white;
-  padding: 2vw;
   border-radius: 1vw;
+  padding: 0.5rem;
+ background-color: #919ab5;
 }
 
-#forside p {
-  font-size: 0.7rem;
-}
 
 #forside h2 {
   color: white;
   text-align: center;
-  font-size: 1.2rem;
-  margin-top: 12vw;
+  font-size: 1.5rem;
 }
 
 #forside h3 {
   color: white;
   text-align: center;
   font-size: 1rem;
+  font-weight: 600;
 }
+
+#forside_tekst {
+  justify-content: center;
+  display: grid;
+}
+
+
+.section_3 h2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  padding-bottom: 1rem;
+}
+
+.section_3 p {
+  font-weight: 400;
+  padding-bottom: 3rem;
+  color: grey;
+  line-height: 1.8;
+}
+
+form textarea {
+  border: none;
+  resize: none;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.61);
+  color: white;
+  border-radius: 1vw;
+  padding-right: 0px;
+}
+
+form input {
+border: none;
+background-color: rgba(0, 0, 0, 0.61);
+color: white;
+border-radius: 1vw;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+
+input::placeholder{
+  color:white;
+  opacity: 1;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+textarea::placeholder{
+  color:white;
+  opacity: 1;
+  padding-left: 0.5rem;
+}
+
+#submit_knap button {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  width: 80px;
+  cursor: pointer;
+  padding: 2vw 0vw 2vw 0vw;
+}
+
+.form_placering {
+  width: 100%;
+}
+
+#submit_knap {
+  padding-top: 1.5rem;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.section_3 {
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  scroll-snap-align: start;
+}
+
+.form_container_1{
+  display: grid;
+  gap: 0.5rem;
+}
+
+form {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.section_1_wrapp {
+  display: grid;
+  gap: 2rem;
+}
+
+
+
+
 
 /* --------------------------Css for ipad-------------------------------*/
 
@@ -237,7 +463,6 @@ button {
     color: white;
     text-align: center;
     font-size: 2rem;
-    margin-top: 12vw;
   }
 
   #forside h3 {
@@ -256,6 +481,18 @@ button {
   footer {
     font-size: 0.9rem;
   }
+
+  #forside_tekst {
+    justify-content: center;
+    gap: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #forside_tekst p{
+    line-height: 1.3;
+  }
+
 }
 
 /* --------------------------Css for stor skærm-------------------------------*/
@@ -277,7 +514,7 @@ button {
     gap: 2vw;
   }
   #forside button {
-    padding: 4vw 0vw 4vw 0vw;
+    padding: 3vw 0vw 3vw 0vw;
     font-size: 2.5rem;
   }
 
@@ -288,6 +525,18 @@ button {
     font-size: 1rem;
   }
 
+  #forside_tekst {
+    gap: 2vw;
+  }
+
+  #p_left {
+    padding: 4.5rem;
+  }
+
+  #p_right {
+    padding: 4.5rem;
+  }
+  
   #alle_overskrift {
     font-size: 2.5rem;
   }
@@ -306,8 +555,30 @@ button {
   footer {
     font-size: 1rem;
   }
-}
 
 .hide {
   display: none;
+}
+
+.section_1_wrapp {
+  display: grid;
+  gap: 1rem;
+}
+
+#submit_knap button {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  border: none;
+  width: 80px;
+  cursor: pointer;
+  padding: 2vw 0vw 2vw 0vw;
+  font-size: 1rem;
+}
+
+#forside h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
 }
