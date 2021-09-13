@@ -21,13 +21,13 @@ button:hover {
 }
 
 #logo img {
-  width: 8vw;
+  width: 4vw;
   height: auto;
   position: absolute;
   left: 0;
   top: 0;
-  margin-top: 2vw;
-  margin-left: 2vw;
+  margin-top: 4vw;
+  margin-left: 4vw;
 }
 
 h1 {
@@ -37,6 +37,12 @@ h1 {
   text-align: center;
 }
 
+.logocontainer {
+  color:white;
+  font-weight: 400;
+  margin-top: 4vw;
+  align-items: center;
+}
 /* --------------------------Css for destinationer-------------------------------*/
 
 #destinationer {
