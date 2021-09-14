@@ -82,6 +82,10 @@ footer p {
   gap: 0.5rem;
 }
 
+.sec_2 {
+  padding: 2rem;
+}
+
 /* --------------------------Css for destinationer-------------------------------*/
 
 .destinationer_header {
@@ -112,7 +116,8 @@ footer p {
 
 img {
   width: 100%;
-  height: 60%;
+  height: 100%;
+  border-radius: 1vw;
 }
 
 #alle_overskrift {
@@ -125,7 +130,7 @@ img {
   text-align: center;
 }
 #destinationer article {
-  display: grid;
+  /* display: grid; */
   place-items: center;
 }
 
@@ -135,9 +140,14 @@ img {
 #destinationer #destination_article h2 {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.61);
-  padding: 1vw 4vw 1vw 4vw;
-  bottom: 1;
+  width: 100%;
+  bottom: 0;
   font-size: 1.5rem;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+  margin: 0;
+  border-bottom-left-radius: 1vw;
+  border-bottom-right-radius: 1vw;
 }
 
 #liste {
@@ -170,6 +180,7 @@ figure {
 figure img {
   width: 100%;
   height: 100%;
+  border-radius: 1vw;
 }
 
 /* --------------------------Css for popUp-------------------------------*/
@@ -182,10 +193,10 @@ figure img {
 
 #popup {
   position: fixed;
-  top: 0;
   display: none;
-  width: 90%;
-  top: 5%;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  top:10%
 }
 
 #popup img {
@@ -193,6 +204,8 @@ figure img {
   height: 100%;
   margin-right: 0;
   margin-left: 0;
+  border-bottom-left-radius: 0vw;
+  border-bottom-right-radius: 0vw;
 }
 
 #popup figure {
@@ -206,8 +219,7 @@ figure img {
 #popup article {
   background-color: #919ab5;
   border-style: none;
-  /* overflow: scroll; */
-  height: 90vh;
+  border-radius: 1vw;
 }
 
 #popup p {
@@ -222,6 +234,14 @@ figure img {
 #popup button {
   border-style: none;
   font-size: 1rem;
+  background-color: white;
+  border-radius: 1rem;
+  width: 30px;
+  height: 30px;
+  margin-top: -12px;
+  margin-left: -11px;
+  position:absolute;
+
 }
 
 /* --------------------------Css for forsiden-------------------------------*/
@@ -410,6 +430,8 @@ textarea::placeholder {
 
 .form_placering {
   width: 100%;
+  display: grid;
+
 }
 
 #submit_knap {
@@ -494,7 +516,8 @@ form {
   }
 
   #popup {
-    width: 70%;
+    top:10%;
+    max-width: 600px;
   }
 
   #popup p {
@@ -514,6 +537,8 @@ form {
   #forside_tekst p {
     line-height: 1.3;
   }
+
+
 }
 
 /* --------------------------Css for stor skærm-------------------------------*/
@@ -535,9 +560,10 @@ form {
     gap: 2vw;
   }
   #forside button {
-    padding: 3vw 0vw 3vw 0vw;
+    padding: 2vw 0vw 2vw 0vw;
     font-size: 2.5rem;
   }
+  
 
   h1 {
     font-size: 3rem;
@@ -567,8 +593,15 @@ form {
   }
 
   #popup {
-    width: 50%;
+    top: 10%;
+    max-width: 600px;
   }
+
+  form {
+    gap: 1.5rem;
+    /* width:40%; */
+  }
+
 
   #popup p {
     width: 90%;
@@ -583,7 +616,7 @@ form {
 
   .section_1_wrapp {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
   }
 
   #submit_knap button {
@@ -602,4 +635,7 @@ form {
     font-size: 2.5rem;
     margin-bottom: 3rem;
   }
+
+
+
 }
