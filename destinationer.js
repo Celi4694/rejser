@@ -59,7 +59,6 @@ function filtrerByer() {
   visByer();
 }
 
-
 async function hentdata() {
   const response = await fetch(url, options);
   byer = await response.json();
@@ -69,7 +68,7 @@ async function hentdata() {
 
 document.querySelector(".valgt").addEventListener("click", klasse);
 
-function klasse(){
+function klasse() {
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   const header = document.querySelector("#alle_overskrift");
@@ -88,7 +87,7 @@ function visKontinentByer() {
     if (kontinent == enkleByer.Kontinent) {
       const klon = temp.cloneNode(true).content;
 
-      klon.querySelector("img").src = "billeder/" + enkleByer.Billede + ".jpg";
+      klon.querySelector("img").src = "billeder/" + enkleByer.Billede + ".webp";
       klon.querySelector("h2").textContent = enkleByer.By;
 
       klon
