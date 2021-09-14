@@ -56,8 +56,8 @@ footer {
   align-items: center;
   color: white;
   justify-content: space-between;
-  padding-left: 3vw;
-  padding-right: 3vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   height: 10vh;
   background-color: #919ab5;
 }
@@ -71,7 +71,7 @@ footer p {
   color: white;
   align-items: center;
   gap: 0.3rem;
-  margin-left: 2vw;
+  margin-left: 5vw;
   margin-top: 2vw;
 }
 #logocontainer a {
@@ -409,9 +409,7 @@ textarea::placeholder {
 }
 
 .form_placering {
-  display: grid;
-  justify-content: center;
-
+  width: 100%;
 }
 
 #submit_knap {
@@ -438,7 +436,7 @@ textarea::placeholder {
 
 form {
   gap: 1.5rem;
-  width: 100%;
+  width:100%;
 }
 
 .section_1_wrapp {
