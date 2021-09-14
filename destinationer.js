@@ -20,6 +20,9 @@ function start() {
   let json;
   console.log(kontinent);
 
+  const header = document.querySelector("#kontinent_overskrift");
+  header.textContent = kontinent.toUpperCase();
+
   const filtrerKnapper = document.querySelectorAll("nav button");
   filtrerKnapper.forEach((knap) => knap.addEventListener("click", filtrerByer));
   container = document.querySelector("section");
@@ -54,8 +57,8 @@ function filtrerByer() {
   // console.log(filtrer);
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
-  const header = document.querySelector("#alle_overskrift");
-  header.textContent = this.textContent;
+  // const header = document.querySelector("#alle_overskrift");
+  // header.textContent = this.textContent;
   visByer();
 }
 
@@ -71,8 +74,8 @@ document.querySelector(".valgt").addEventListener("click", klasse);
 function klasse() {
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
-  const header = document.querySelector("#alle_overskrift");
-  header.textContent = this.textContent;
+  // const header = document.querySelector("#alle_overskrift");
+  // header.textContent = this.textContent;
 }
 
 function visKontinentByer() {
