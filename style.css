@@ -73,7 +73,7 @@ footer p {
   align-items: center;
   gap: 0.3rem;
   margin-left: 5vw;
-  margin-top: 5vw;
+  margin-top: 2vw;
 }
 #logocontainer a {
   text-decoration: none;
@@ -223,14 +223,6 @@ figure img {
 }
 
 /* --------------------------Css for forsiden-------------------------------*/
-
-.menu {
-  display: flex;
-  align-items: center;
-  color: white;
-  justify-content: space-between;
-  padding-top: 2rem;
-}
 
 #forside {
   background: url(billeder/baggrund.png);
@@ -437,12 +429,12 @@ textarea::placeholder {
 .form_container_1 {
   display: grid;
   gap: 0.5rem;
+  margin-bottom: 1vh;
 }
 
 form {
-  display: grid;
   gap: 1.5rem;
-  width: 100%;
+  width: 50%;
 }
 
 .section_1_wrapp {
