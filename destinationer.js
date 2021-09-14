@@ -59,11 +59,21 @@ function filtrerByer() {
   visByer();
 }
 
+
 async function hentdata() {
   const response = await fetch(url, options);
   byer = await response.json();
   // console.log(byer);
   visKontinentByer();
+}
+
+document.querySelector(".valgt").addEventListener("click", klasse);
+
+function klasse(){
+  document.querySelector(".valgt").classList.remove("valgt");
+  this.classList.add("valgt");
+  const header = document.querySelector("#alle_overskrift");
+  header.textContent = this.textContent;
 }
 
 function visKontinentByer() {
