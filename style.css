@@ -78,6 +78,7 @@ footer p {
   gap: 0.3rem;
   margin-left: 2vw;
   margin-top: 2vw;
+  z-index: 100;
 }
 #logocontainer a {
   text-decoration: none;
