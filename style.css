@@ -4,6 +4,10 @@ html {
   overscroll-behavior-y: contain;
 }
 
+.navn {
+  font-weight: 600;
+}
+
 body {
   margin: 0px;
 }
@@ -58,6 +62,7 @@ footer {
   justify-content: space-between;
   padding-left: 2vw;
   padding-right: 2vw;
+  margin-top: 10vh;
   height: 10vh;
   background-color: #919ab5;
 }
@@ -474,7 +479,7 @@ form {
 }
 
 #forside button:hover {
-  background-color: #919ab5;
+  scale: 1.1;
 }
 
 /* --------------------------Css for ipad-------------------------------*/
