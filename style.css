@@ -137,6 +137,12 @@ img {
 #destinationer #destination_article {
   position: relative;
 }
+
+#destinationer #destination_article:hover {
+  scale:1.1;
+}
+
+
 #destinationer #destination_article h2 {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.61);
@@ -469,6 +475,11 @@ form {
   display: grid;
   gap: 2rem;
 }
+
+#forside button:hover {
+  background-color: #919ab5;
+}
+
 
 /* --------------------------Css for ipad-------------------------------*/
 
