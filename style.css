@@ -14,7 +14,7 @@ main {
 }
 
 #logo img {
-  width: 30px;
+  width: 4vw;
   height: auto;
   /* position: absolute; */
   left: 0;
@@ -56,8 +56,8 @@ footer {
   align-items: center;
   color: white;
   justify-content: space-between;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
   height: 10vh;
   background-color: #919ab5;
 }
@@ -71,7 +71,7 @@ footer p {
   color: white;
   align-items: center;
   gap: 0.3rem;
-  margin-left: 5vw;
+  margin-left: 2vw;
   margin-top: 2vw;
 }
 #logocontainer a {
@@ -96,7 +96,7 @@ footer p {
 }
 
 #destinationer {
-  background: url(billeder/baggrund.png);
+  background: url(billeder/baggrund.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -194,9 +194,9 @@ figure img {
 #popup {
   position: fixed;
   display: none;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  top:10%
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.568);
 }
 
 #popup img {
@@ -220,6 +220,10 @@ figure img {
   background-color: #919ab5;
   border-style: none;
   border-radius: 1vw;
+  position:relative;
+  width: 90%;
+  max-width: 600px;
+  margin:5rem auto;
 }
 
 #popup p {
@@ -247,7 +251,7 @@ figure img {
 /* --------------------------Css for forsiden-------------------------------*/
 
 #forside {
-  background: url(billeder/baggrund.png);
+  background: url(billeder/baggrund.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -516,8 +520,6 @@ form {
   }
 
   #popup {
-    top:10%;
-    max-width: 600px;
   }
 
   #popup p {
@@ -589,12 +591,10 @@ form {
   }
 
   #logo img {
-    width: 2.5vw;
+    width: 1.3vw;
   }
 
   #popup {
-    top: 10%;
-    max-width: 600px;
   }
 
   form {
@@ -627,7 +627,7 @@ form {
     border: none;
     width: 80px;
     cursor: pointer;
-    padding: 2vw 0vw 2vw 0vw;
+    padding: 1vw 0vw 1vw 0vw;
     font-size: 1rem;
   }
 
@@ -636,6 +636,21 @@ form {
     margin-bottom: 3rem;
   }
 
+  .form_container_1 {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+
+  .form_container_2 {
+    display: grid;
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+
+  #logocontainer {
+    margin-left: 2vw;
+    margin-top: 2vw;
+  }
 
 
 }
