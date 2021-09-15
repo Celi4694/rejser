@@ -228,7 +228,7 @@ figure img {
   position: relative;
   width: 90%;
   max-width: 600px;
-  margin: 5rem auto;
+  margin: 2rem auto;
 }
 
 #popup p {
@@ -488,6 +488,10 @@ form {
   #destinationer section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  #popup article {
+    margin: 5rem auto;
   }
 
   .destinationer_header {
