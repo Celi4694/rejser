@@ -47,6 +47,8 @@ function start() {
   hentdata();
 }
 
+
+
 // Her starter filtrerNav
 function filtrerNav() {
   // Her laver vi konstanten knapper og tager fat (med querySelectorAll) i ALLE knapperne i navigationen
@@ -71,6 +73,9 @@ function filtrerNav() {
     }
   });
 }
+
+
+
 // Vi starter fuktionen filtrerByer
 function filtrerByer() {
   // Her tager vi fat i datasettet land, for at filtrere byerne indenfor hvert land
@@ -82,6 +87,8 @@ function filtrerByer() {
   visByer();
 }
 
+
+
 // Her starter funktionen hentdata
 async function hentdata() {
   // Her henter vi url og api-key, fra de globale variabler, som vi har defineret længere oppe
@@ -92,6 +99,7 @@ async function hentdata() {
   visKontinentByer();
 }
 
+
 // Ligesom i filtrerByer funktionen fjerner vi her klassen valgt på vores alle-knap (som ikke er en del
 // af funktionen filtrerByer længere), så den ikke er der med det samme, for så at tiljøje den, når der bliver trykket på den.
 document.querySelector(".valgt").addEventListener("click", klasse);
@@ -99,6 +107,7 @@ function klasse() {
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
 }
+
 
 // Her starter funktionen visKontinentByer
 function visKontinentByer() {
@@ -130,6 +139,8 @@ function visKontinentByer() {
     }
   });
 }
+
+
 // Her starter funktionen visByer
 function visByer() {
   // Den tomme variabel dest, som vi har defineret globalt længere oppe, tilføjer vi nu "liste" (fra html) til
