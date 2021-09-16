@@ -197,15 +197,18 @@ function visPopUp(popUp) {
   popup.querySelector(".Rejselaengde").innerHTML =
     "<b>We recommend:<b>" + " " + popUp.Rejselaengde;
 
-  // Sitet synkroniserer med data fra json database
-  async function hentData() {
-    // Her henter vi url og api-key, fra de globale variabler, som vi har defineret længere oppe
-    const result = await fetch(url + kontinent, options);
-    // variablen byer bliver nu til det, som konstanten response henter ned
-    land = await result.json();
-    // Her kalder vi funktionen visLand
-    visLand();
-  }
+  // // Sitet synkroniserer med data fra json database
+  // async function hentData() {
+  //   // Her henter vi url og api-key, fra de globale variabler, som vi har defineret længere oppe
+  //   const result = await fetch(url + kontinent, options);
+  //   // variablen byer bliver nu til det, som konstanten response henter ned
+  //   land = await result.json();
+  //   // Her kalder vi funktionen visLand
+  //   visLand();
+  //   console.log(visLand);
+  // }
+
+
   // Her bliver vi ført tilbage til den foregående side, ved hjælp af browserens tilbageknap
   document.querySelector("button").addEventListener("click", () => {
     window.history.back();
