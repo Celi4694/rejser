@@ -208,11 +208,10 @@ function visPopUp(popUp) {
   //   console.log(visLand);
   // }
 
-
   // Her bliver vi ført tilbage til den foregående side, ved hjælp af browserens tilbageknap
-  document.querySelector("button").addEventListener("click", () => {
-    window.history.back();
-  });
+  // document.querySelector("button").addEventListener("click", () => {
+  //   window.history.back();
+  // });
 }
 
 hentdata();
